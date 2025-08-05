@@ -7,7 +7,7 @@ interface Props {
 
 export default function ProductContainer({ product }: Props){
     return (
-        <div key={product.id} className="bg-[#d7cec7] flex-1 border p-4 rounded-md gap-4 w-1/3 min-w-1/4 max-w-1/2 "> 
+        <div className="bg-grayish flex-1 border-4 border-navy p-4 gap-4 w-1/3 min-w-1/4 max-w-1/2 "> 
             <div className="flex flex-col justify-between h-full p-2">
                 <img
                 src={product.image}
@@ -23,10 +23,10 @@ export default function ProductContainer({ product }: Props){
                 </div>
 
                 <div className="justify-around flex w-full flex-wrap " >
-                    <button className=" w-[40%] mt-4 bg-white hover:bg-[#ff3b3f] text-black text-sm py-2 px-4 rounded shadow-sm transition duration-200">
+                    <button className=" w-[40%] mt-4 bg-white border-2 border-navy hover:bg-pinkish text-black text-sm py-2 px-4 shadow-sm transition duration-200">
                         Add to Cart
                     </button>
-                    <button className=" w-[40%] mt-4 bg-white hover:bg-[#ff3b3f] text-black text-sm py-2 px-4 rounded shadow-sm transition duration-200">
+                    <button className=" w-[40%] mt-4 bg-white border-2 border-navy hover:bg-pinkish text-black text-sm py-2 px-4 shadow-sm transition duration-200">
                         Buy Now
                     </button>
                 </div>

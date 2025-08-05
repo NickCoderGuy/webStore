@@ -24,7 +24,7 @@ export default function Store() {
     },[setProducts])
 
     return (
-        <div className="bg-[#a9a9a9]">
+        <div className="bg-cream">
             <NavBar/>
             <div className="w-full flex justify-center">
             <div className="mt-10 mb-10 flex flex-wrap gap-4 max-w-6xl w-full px-4">

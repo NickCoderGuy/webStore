@@ -1,22 +1,28 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function NavBar(){
     return (
-        <div className=" min-w-screen bg-[#ff3b3f] flex flex-row" >
-            <div className="p-2 hover:bg-[#8b0000] focus:outline-none focus:ring-2" >
-            <Link  href="/">Home</Link>
+        <div className=" min-w-screen border-b-4 border-navy bg-pinkish flex flex-row" >
+            <div className="p-2" >
+                <Image src={"/logo.png"} alt="Fake Web Store Logo"
+                    width={60}
+                    height={60}/>
             </div>
-            <div className="p-2 hover:bg-[#8b0000] focus:outline-none focus:ring-2" >
-            <Link  href="/store">Store</Link>
+            <div className="p-2 flex items-center" >
+                <Link className="hover:underline hover:text-yellow-200 transition-colors duration-200" href="/">Home</Link>
             </div>
-            <div className="p-2 hover:bg-[#8b0000] focus:outline-none focus:ring-2" >
-            <Link href="/money">Money</Link>
+            <div className="p-2 flex items-center" >
+                <Link className="hover:underline hover:text-yellow-200 transition-colors duration-200" href="/store">Store</Link>
             </div>
-            <div className="p-2 hover:bg-[#8b0000] focus:outline-none focus:ring-2" >
-            <Link href="/cart">Cart</Link>
+            <div className="p-2 flex items-center" >
+                <Link className="hover:underline hover:text-yellow-200 transition-colors duration-200" href="/money">Money</Link>
             </div>
-            <div className="p-2 hover:bg-[#8b0000] focus:outline-none focus:ring-2" >
-            <Link href="/inventory">Inventory</Link>
+            <div className="p-2 flex items-center" >
+                <Link className="hover:underline hover:text-yellow-200 transition-colors duration-200" href="/cart">Cart</Link>
+            </div>
+            <div className="p-2 flex items-center" >
+                <Link className="hover:underline hover:text-yellow-200 transition-colors duration-200" href="/inventory">Inventory</Link>
             </div>
         </div>
     );
