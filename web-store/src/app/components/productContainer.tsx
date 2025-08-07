@@ -7,7 +7,7 @@ interface Props {
 
 export default function ProductContainer({ product }: Props){
     return (
-        <div className="bg-grayish flex-1 border-4 border-navy p-4 gap-4 w-1/3 min-w-1/4 max-w-1/2 "> 
+        <div className="bg-grayish flex-1 border-4 border-navy p-4 gap-4 w-full sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/3 xsm:min-w-1/2 sm:min-w-1/2 md:min-w-1/3 lg:min-w-1/4 xl:min-w-1/4 "> 
             <div className="flex flex-col justify-between h-full p-2">
                 <img
                 src={product.image}

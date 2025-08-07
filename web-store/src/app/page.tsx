@@ -3,14 +3,16 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-cream text-white w-full min-h-screen " >
+    <div className="bg-cream text-white w-full min-h-screen justify-center items-center">
       <NavBar/>
-      <div className=" flex flex-wrap w-full justify-center " >
-        <div>
-        <Image src={"/webStoreBanner.png"} alt={"Web Store Banner"} height={80} width={200} />
+      <div className="items-center flex flex-col flex-wrap justify-between gap-2 mt-6">
+        <div className="relative flex-1 w-1/3 aspect-[3/1]">
+          <Image className="border-4 border-navy" src={"/webStoreBanner.png"}
+           alt={"Web Store Banner"} fill={true} />
         </div>
-        <div>
-        <Image src={"/shopBanner.png"} alt={"Shop Banner"} height={80} width={200} />
+        <div className=" relative flex-1 w-1/3 aspect-[3/1]">
+          <Image className="border-4 border-navy" src={"/shopBanner.png"}
+           alt={"Shop Banner"} fill={true} />
         </div>
       </div>
     </div>
