@@ -2,6 +2,7 @@
 import { useState, useEffect, useContext } from "react";
 import NavBar from "../components/navbar";
 import { CoinContext } from "@/context/coinContext";
+import Image from "next/image";
 
 export default function Money() {
   const [jumping, setJumping] = useState(false);
@@ -61,24 +62,32 @@ export default function Money() {
       <NavBar />
 
       <h1 className="mt-6 text-black font-bold text-2xl font-mono">
-        Fake Bucks: {score}
+        Fake Coins: {score}
       </h1>
 
-      <div className="relative w-[300px] h-[150px] bg-navy border-4 border-yellow-300 mt-6 overflow-hidden">
-        <div
-            className="absolute left-10 w-[30px] h-[30px] bg-pinkish"
+      <div className="relative w-[300px] h-[220px] bg-[url('/gameBackground.png')] bg-cover bg-center border-4 border-yellow-300 mt-6 overflow-hidden">
+        <Image
+            src="/heroJump.png" 
+            alt="Hero"
+            width={60}
+            height={60}
+            className="absolute left-10"
             style={{
-            bottom: jumping ? "80px" : "0px",
-            transition: "bottom 0.3s ease",
+                bottom: jumping ? "80px" : "0px",
+                transition: "bottom 0.3s ease",
             }}
-        ></div>
-        <div
-            className="absolute w-[20px] h-[30px] bg-yellow-300"
+        />
+        <Image
+            src="/redEnemy.png" 
+            alt="Red Slime Enemy"
+            width={70}
+            height={70}
+            className="absolute object-bottom"
             style={{
-            left: `${obstacleX}px`,
-            bottom: "0px",
+                left: `${obstacleX}px`,
+                bottom: "-15px",
             }}
-        ></div>
+        />
         {(!startGame && !gameOver) && (
             <button
             onClick={() => setStartGame(true)}
