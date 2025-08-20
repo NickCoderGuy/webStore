@@ -85,7 +85,7 @@ export default function Money() {
             className="absolute object-bottom"
             style={{
                 left: `${obstacleX}px`,
-                bottom: "-15px",
+                bottom: "0px",
             }}
         />
         {(!startGame && !gameOver) && (
